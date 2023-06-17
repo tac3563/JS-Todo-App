@@ -1,13 +1,9 @@
 body {
   box-sizing: border-box;
   margin: 0;
+  background-color: #d9e4f5;
+  background-image: linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%);
 
-  background: linear-gradient(
-    90deg,
-    rgba(255, 253, 253, 1) 0%,
-    rgba(255, 243, 239, 1) 35%,
-    rgba(250, 254, 240, 1) 100%
-  );
   color: $text-colour;
 
   .page-container {
@@ -39,7 +35,6 @@ body {
           @include fontSize($font-size-heading-sm);
 
           @media (min-width: 599px) {
-            margin: 0 0 1.5em 0;
             @include fontSize($font-size-heading-md);
           }
         }
@@ -47,17 +42,38 @@ body {
         .todo-body {
           @include flexCol;
 
-          input {
-            min-height: 2em;
-            &:not(:last-of-type) {
-              margin-bottom: 1.5em;
+          .todo-list-item {
+            list-style: none;
+            display: flex;
+            align-items: center;
+
+            input[type="text"] {
+              min-height: 2em;
+              border: none;
+              margin-left: 1em;
+              @include fontSize($font-size-copy-lg);
+              color: $text-colour;
+
+              &:focus-visible {
+                outline: none;
+              }
+
+              &:not(:last-of-type) {
+                margin-bottom: 1.5em;
+              }
+
+              @media (min-width: 599px) {
+                min-height: 3em;
+                &:not(:last-of-type) {
+                  margin-bottom: 2em;
+                }
+              }
             }
 
-            @media (min-width: 599px) {
-              min-height: 3em;
-              &:not(:last-of-type) {
-                margin-bottom: 2em;
-              }
+            input[type="radio"] {
+              margin: 0;
+              width: 40px;
+              height: 40px;
             }
           }
 

@@ -36,7 +36,7 @@ to-do-app/
 
 - `index.html`: HTML structure of the application.
 - `styles.css`: Styling rules for the app.
-- `script.js`: JavaScript code for managing the to-do list functionality.
+- `app.js`: JavaScript code for managing the to-do list functionality.
 
 ## License
 
