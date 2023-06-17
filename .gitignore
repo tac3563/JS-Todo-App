@@ -1,0 +1,12 @@
+# Node.js dependencies
+node_modules/
+
+# Compiled Sass files (if you're generating CSS from Sass in your project)
+dist/*.css
+styles.css.map
+
+# ESLint cache
+.eslintcache
+
+# Log files
+*.log
