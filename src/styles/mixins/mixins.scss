@@ -5,6 +5,11 @@
   margin-inline: auto;
 }
 
+@mixin flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
 @function calculateRem($size) {
   $remSize: calc($size / 16px);
   @return #{$remSize}rem;

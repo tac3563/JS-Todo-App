@@ -1,4 +1,7 @@
 body {
+  box-sizing: border-box;
+  margin: 0;
+
   background: linear-gradient(
     90deg,
     rgba(255, 253, 253, 1) 0%,
@@ -14,44 +17,67 @@ body {
     max-width: 1440px;
 
     .todo-card-container {
-      width: 40%;
+      max-width: 600px;
+      width: 100%;
+      margin: auto 2em;
       border-radius: 25px;
-      box-shadow: 0 0 5px;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+        rgba(0, 0, 0, 0.22) 0px 15px 12px;
       background-color: #ffffff;
 
       .todo-card {
-        display: flex;
-        flex-direction: column;
-        padding: 3em;
+        @include flexCol;
+        padding: 2.5em;
+
+        @media (min-width: 599px) {
+          padding: 3em;
+        }
 
         .todo-title {
-          margin: 0 0 1.5em 0;
+          margin: 0 0 1em 0;
           font-weight: 500;
           @include fontSize($font-size-heading-sm);
+
+          @media (min-width: 599px) {
+            margin: 0 0 1.5em 0;
+            @include fontSize($font-size-heading-md);
+          }
         }
 
         .todo-body {
-          display: flex;
-          flex-direction: column;
+          @include flexCol;
 
           input {
-            min-height: 3em;
-
+            min-height: 2em;
             &:not(:last-of-type) {
-              margin-bottom: 2em;
+              margin-bottom: 1.5em;
+            }
+
+            @media (min-width: 599px) {
+              min-height: 3em;
+              &:not(:last-of-type) {
+                margin-bottom: 2em;
+              }
             }
           }
 
           .todo-btn {
-            @include fontSize($font-size-copy-lg);
-            margin-top: 2.5em;
-            padding: 1em;
-            border-radius: 30px;
+            @include fontSize($font-size-copy-md);
+            margin-top: 2em;
+            padding: 0.5em;
+            border-radius: 20px;
             border: none;
             background-color: #edeef0;
             color: $text-colour;
             font-weight: bold;
-            transition: ease 0.2s;
+            transition: $button-transition;
+
+            @media (min-width: 599px) {
+              margin-top: 2.5em;
+              border-radius: 30px;
+              padding: 0.7em;
+              @include fontSize($font-size-copy-lg);
+            }
 
             &:hover {
               opacity: 0.7;
