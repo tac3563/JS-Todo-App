@@ -13,13 +13,16 @@ body {
     max-width: 1440px;
 
     .todo-card-container {
-      max-width: 600px;
       width: 100%;
       margin: auto 2em;
       border-radius: 25px;
       box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
         rgba(0, 0, 0, 0.22) 0px 15px 12px;
       background-color: #ffffff;
+
+      @media (min-width: 639px) {
+        max-width: 600px;
+      }
 
       .todo-card {
         @include flexCol;
@@ -42,38 +45,58 @@ body {
         .todo-body {
           @include flexCol;
 
-          .todo-list-item {
-            list-style: none;
-            display: flex;
-            align-items: center;
+          .todo-list {
+            padding-left: 0.5em;
 
-            input[type="text"] {
-              min-height: 2em;
-              border: none;
-              margin-left: 1em;
-              @include fontSize($font-size-copy-lg);
-              color: $text-colour;
-
-              &:focus-visible {
-                outline: none;
-              }
-
-              &:not(:last-of-type) {
-                margin-bottom: 1.5em;
-              }
-
-              @media (min-width: 599px) {
-                min-height: 3em;
-                &:not(:last-of-type) {
-                  margin-bottom: 2em;
-                }
-              }
+            @media (min-width: 599px) {
+              padding-left: 1em;
             }
 
-            input[type="radio"] {
-              margin: 0;
-              width: 40px;
-              height: 40px;
+            .todo-list-item {
+              list-style: none;
+              display: flex;
+              align-items: center;
+              max-width: 100%;
+              width: 100%;
+
+              input[type="text"] {
+                min-height: 2em;
+                max-width: 100%;
+                width: 100%;
+                border: none;
+                margin-left: 0.5em;
+                @include fontSize($font-size-copy-sm);
+                color: $text-colour;
+
+                &:focus-visible {
+                  outline: none;
+                }
+
+                &:not(:last-of-type) {
+                  margin-bottom: 1.5em;
+                }
+
+                @media (min-width: 599px) {
+                  min-height: 3em;
+                  margin-left: 1em;
+                  @include fontSize($font-size-copy-lg);
+
+                  &:not(:last-of-type) {
+                    margin-bottom: 2em;
+                  }
+                }
+              }
+
+              input[type="radio"] {
+                margin: 0;
+                width: 20px;
+                height: 20px;
+
+                @media (min-width: 599px) {
+                  width: 40px;
+                  height: 40px;
+                }
+              }
             }
           }
 
