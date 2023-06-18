@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "sass src/styles/styles.scss dist/styles.css && cp -R dist/ docs/",
+    "build": "sass src/styles/styles.scss dist/styles.css && cp -R index.html docs/ && cp -R app.js docs/ && cp -R src/assets docs/",
     "watch": "sass src/styles/styles.scss dist/styles.css --watch"
   },
   "author": "",

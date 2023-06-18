@@ -2,7 +2,7 @@
 node_modules/
 
 # Compiled Sass files (if you're generating CSS from Sass in your project)
-dist/*.css
+dist/*
 styles.css.map
 
 # ESLint cache
