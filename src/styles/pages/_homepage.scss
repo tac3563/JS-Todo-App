@@ -85,12 +85,21 @@ body {
                     margin-bottom: 2em;
                   }
                 }
+
+                &.is-checked {
+                  text-decoration: line-through;
+                }
               }
 
               input[type="radio"] {
                 margin: 0;
                 width: 20px;
                 height: 20px;
+                position: relative;
+
+                &:checked {
+                  accent-color: #edeef0;
+                }
 
                 @media (min-width: 599px) {
                   width: 40px;

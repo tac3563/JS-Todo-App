@@ -3,7 +3,7 @@
 2. Add query selectors for input fields and button [DONE]
 3. Add event handlers...
     3a. deleting input on backspace [DONE]
-    3b. marking input as done
+    3b. marking input as done [DONE]
     3c. adding new input from button [DONE]
     3d. adding new input on enter [DONE]
 4. Add markup for remove item popout
@@ -11,10 +11,17 @@
 6. Add localStorage for persisting data between sessions
 */
 
-/* Adding new list items: */
-
 const addTodo = document.querySelector(".todo-btn");
 const toDoList = document.querySelector(".todo-list");
+const originalTodoRadio = document.getElementById("todo-list-radio");
+const originalTodoInput = document.getElementById("todo-list-task");
+
+const initializeOriginalTodoItem = () => {
+  originalTodoRadio.addEventListener("click", () => {
+    originalTodoInput.classList.toggle("is-checked");
+    originalTodoInput.value = originalTodoRadio.checked ? "Task Completed" : "";
+  });
+};
 
 const createToDoItem = () => {
   const newTodoItem = document.createElement("li");
@@ -30,6 +37,11 @@ const createToDoItem = () => {
   newTodoItem.append(newTodoRadio, newTodoInput);
 
   newTodoInput.focus();
+
+  newTodoRadio.addEventListener("click", () => {
+    newTodoInput.classList.toggle("is-checked");
+    newTodoInput.value = newTodoRadio.checked ? "Task Completed" : "";
+  });
 };
 
 addTodo.addEventListener("click", createToDoItem);
@@ -39,7 +51,6 @@ toDoList.addEventListener("keydown", (event) => {
     event.preventDefault();
     createToDoItem();
   } else if (event.key === "Backspace") {
-    /* Removes elements on backspace if no text exists and switches focus to previous element: */
     const lastItem = toDoList.lastChild;
     if (lastItem) {
       const input = lastItem.querySelector(`input[type='text']`);
@@ -57,3 +68,5 @@ toDoList.addEventListener("keydown", (event) => {
     }
   }
 });
+
+initializeOriginalTodoItem();
