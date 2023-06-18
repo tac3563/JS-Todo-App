@@ -1,0 +1,138 @@
+html:root {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #d9e4f5;
+  background-image: linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%);
+  color: #333333;
+}
+body .page-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  max-width: 1440px;
+}
+body .page-container .todo-card-container {
+  width: 100%;
+  margin: auto 2em;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  background-color: #ffffff;
+}
+@media (min-width: 639px) {
+  body .page-container .todo-card-container {
+    max-width: 600px;
+  }
+}
+body .page-container .todo-card-container .todo-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5em;
+}
+@media (min-width: 599px) {
+  body .page-container .todo-card-container .todo-card {
+    padding: 3em;
+  }
+}
+body .page-container .todo-card-container .todo-card .todo-title {
+  margin: 0 0 1em 0;
+  font-weight: 500;
+  font-size: 36px;
+  font-size: 2.25rem;
+}
+@media (min-width: 599px) {
+  body .page-container .todo-card-container .todo-card .todo-title {
+    font-size: 48px;
+    font-size: 3rem;
+  }
+}
+body .page-container .todo-card-container .todo-card .todo-body {
+  display: flex;
+  flex-direction: column;
+}
+body .page-container .todo-card-container .todo-card .todo-body .todo-list {
+  padding-left: 0.5em;
+}
+@media (min-width: 599px) {
+  body .page-container .todo-card-container .todo-card .todo-body .todo-list {
+    padding-left: 1em;
+  }
+}
+body .page-container .todo-card-container .todo-card .todo-body .todo-list .todo-list-item {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  width: 100%;
+}
+body .page-container .todo-card-container .todo-card .todo-body .todo-list .todo-list-item input[type=text] {
+  min-height: 2em;
+  max-width: 100%;
+  width: 100%;
+  border: none;
+  margin-left: 0.5em;
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #333333;
+}
+body .page-container .todo-card-container .todo-card .todo-body .todo-list .todo-list-item input[type=text]:focus-visible {
+  outline: none;
+}
+body .page-container .todo-card-container .todo-card .todo-body .todo-list .todo-list-item input[type=text]:not(:last-of-type) {
+  margin-bottom: 1.5em;
+}
+@media (min-width: 599px) {
+  body .page-container .todo-card-container .todo-card .todo-body .todo-list .todo-list-item input[type=text] {
+    min-height: 3em;
+    margin-left: 1em;
+    font-size: 28px;
+    font-size: 1.75rem;
+  }
+  body .page-container .todo-card-container .todo-card .todo-body .todo-list .todo-list-item input[type=text]:not(:last-of-type) {
+    margin-bottom: 2em;
+  }
+}
+body .page-container .todo-card-container .todo-card .todo-body .todo-list .todo-list-item input[type=radio] {
+  margin: 0;
+  width: 20px;
+  height: 20px;
+}
+@media (min-width: 599px) {
+  body .page-container .todo-card-container .todo-card .todo-body .todo-list .todo-list-item input[type=radio] {
+    width: 40px;
+    height: 40px;
+  }
+}
+body .page-container .todo-card-container .todo-card .todo-body .todo-btn {
+  font-size: 24px;
+  font-size: 1.5rem;
+  margin-top: 2em;
+  padding: 0.5em;
+  border-radius: 20px;
+  border: none;
+  background-color: #edeef0;
+  color: #333333;
+  font-weight: bold;
+  transition: ease 0.2s;
+}
+@media (min-width: 599px) {
+  body .page-container .todo-card-container .todo-card .todo-body .todo-btn {
+    margin-top: 2.5em;
+    border-radius: 30px;
+    padding: 0.7em;
+    font-size: 28px;
+    font-size: 1.75rem;
+  }
+}
+body .page-container .todo-card-container .todo-card .todo-body .todo-btn:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=styles.css.map */
