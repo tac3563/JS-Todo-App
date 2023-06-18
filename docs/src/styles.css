@@ -22,8 +22,7 @@ body .page-container .todo-card-container {
   width: 100%;
   margin: auto 2em;
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   background-color: #ffffff;
 }
 @media (min-width: 639px) {
@@ -65,27 +64,14 @@ body .page-container .todo-card-container .todo-card .todo-body .todo-list {
     padding-left: 1em;
   }
 }
-body
-  .page-container
-  .todo-card-container
-  .todo-card
-  .todo-body
-  .todo-list
-  .todo-list-item {
+body .page-container .todo-card-container .todo-card .todo-body .todo-list .todo-list-item {
   list-style: none;
   display: flex;
   align-items: center;
   max-width: 100%;
   width: 100%;
 }
-body
-  .page-container
-  .todo-card-container
-  .todo-card
-  .todo-body
-  .todo-list
-  .todo-list-item
-  input[type="text"] {
+body .page-container .todo-card-container .todo-card .todo-body .todo-list .todo-list-item input[type=text] {
   min-height: 2em;
   max-width: 100%;
   width: 100%;
@@ -95,72 +81,37 @@ body
   font-size: 0.875rem;
   color: #333333;
 }
-body
-  .page-container
-  .todo-card-container
-  .todo-card
-  .todo-body
-  .todo-list
-  .todo-list-item
-  input[type="text"]:focus-visible {
+body .page-container .todo-card-container .todo-card .todo-body .todo-list .todo-list-item input[type=text]:focus-visible {
   outline: none;
 }
-body
-  .page-container
-  .todo-card-container
-  .todo-card
-  .todo-body
-  .todo-list
-  .todo-list-item
-  input[type="text"]:not(:last-of-type) {
+body .page-container .todo-card-container .todo-card .todo-body .todo-list .todo-list-item input[type=text]:not(:last-of-type) {
   margin-bottom: 1.5em;
 }
 @media (min-width: 599px) {
-  body
-    .page-container
-    .todo-card-container
-    .todo-card
-    .todo-body
-    .todo-list
-    .todo-list-item
-    input[type="text"] {
+  body .page-container .todo-card-container .todo-card .todo-body .todo-list .todo-list-item input[type=text] {
     min-height: 3em;
     margin-left: 1em;
     font-size: 28px;
     font-size: 1.75rem;
   }
-  body
-    .page-container
-    .todo-card-container
-    .todo-card
-    .todo-body
-    .todo-list
-    .todo-list-item
-    input[type="text"]:not(:last-of-type) {
+  body .page-container .todo-card-container .todo-card .todo-body .todo-list .todo-list-item input[type=text]:not(:last-of-type) {
     margin-bottom: 2em;
   }
 }
-body
-  .page-container
-  .todo-card-container
-  .todo-card
-  .todo-body
-  .todo-list
-  .todo-list-item
-  input[type="radio"] {
+body .page-container .todo-card-container .todo-card .todo-body .todo-list .todo-list-item input[type=text].is-checked {
+  text-decoration: line-through;
+}
+body .page-container .todo-card-container .todo-card .todo-body .todo-list .todo-list-item input[type=radio] {
   margin: 0;
   width: 20px;
   height: 20px;
+  position: relative;
+}
+body .page-container .todo-card-container .todo-card .todo-body .todo-list .todo-list-item input[type=radio]:checked {
+  accent-color: #edeef0;
 }
 @media (min-width: 599px) {
-  body
-    .page-container
-    .todo-card-container
-    .todo-card
-    .todo-body
-    .todo-list
-    .todo-list-item
-    input[type="radio"] {
+  body .page-container .todo-card-container .todo-card .todo-body .todo-list .todo-list-item input[type=radio] {
     width: 40px;
     height: 40px;
   }
@@ -186,12 +137,7 @@ body .page-container .todo-card-container .todo-card .todo-body .todo-btn {
     font-size: 1.75rem;
   }
 }
-body
-  .page-container
-  .todo-card-container
-  .todo-card
-  .todo-body
-  .todo-btn:hover {
+body .page-container .todo-card-container .todo-card .todo-body .todo-btn:hover {
   opacity: 0.7;
   cursor: pointer;
 }
